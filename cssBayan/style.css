@@ -34,7 +34,8 @@ img {
     display: block;
     margin-bottom: 1em;
     width: 0;
-    transition: width ease-in 300ms;
+    opacity: 1;
+    transition: ease-in-out 300ms;
 }
 
 .mem-title {
@@ -53,7 +54,7 @@ img {
     padding: 1.5em 0;
     width: 100%;
     color: blue;
-    transition: ease-in-out 300ms;
+    transition: color ease-in-out 300ms;
 }
 
 .accordion input{
@@ -65,7 +66,8 @@ img {
     opacity: 1;
     font-size: 2.2em;
     font-weight: 900;
-    transition: opacity ease-in-out 300ms;
+    color: black;
+    transition: ease-in-out 300ms;
 }
 
 .accordion input:checked + label .label-before {
@@ -86,6 +88,19 @@ img {
 
 .accordion input:checked + label .label {
     color: black;
+}
+
+.accordion input:checked + label:active .label {
+    color: lightblue;
+}
+
+.accordion label:active .label,
+.accordion label:active .label-before {
+    color: lightblue;
+}
+
+.accordion label:active img {
+    opacity: 0.5;
 }
 
 @media (hover:hover) {
